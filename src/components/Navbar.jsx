@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
+  const [navbar, setNavbar] = useState(false);
+
+  const changeNavBack = () => {
+    if (window.scrollY >= 80) {
+      setNavbar(true);
+    }
+  };
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
       <div className="container nav-container">
         <a className="navbar-brand" href="#">
           SA Portfolio
@@ -38,7 +45,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item mx-2">
               <a className="nav-link" href="#">
-                service
+                Skills
               </a>
             </li>
             <li className="nav-item mx-2">
