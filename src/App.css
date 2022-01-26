@@ -5,6 +5,10 @@
   --primary-orange-hover: #b6930a;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Roboto Condensed", sans-serif;
 }
@@ -13,7 +17,7 @@ body {
   margin-left: auto !important;
 }
 
-.nav-container a.navbar-brand {
+.nav-container .navbar-brand {
   color: white;
   font-weight: bold;
   font-size: 2rem;
@@ -40,7 +44,8 @@ ul li a.nav-link {
   border-bottom: 3px solid rgba(255, 255, 255, 0);
 }
 
-ul li a.nav-link:hover {
+ul li.nav-item a.nav-link:hover,
+ul li.nav-item a.nav-link.active {
   border-bottom: 3px solid var(--primary-orange);
   color: var(--primary-orange) !important;
 }
@@ -217,4 +222,49 @@ ul li a.nav-link:hover {
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+
+.contact-icon a {
+  text-decoration: none;
+  color: #343a40;
+}
+
+.contact-icon a:hover {
+  text-decoration: underline;
+}
+
+.faIcon {
+  color: orange;
+}
+
+.social-icon a {
+  font-size: 2rem;
+  margin: 0 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  /* background: rgba(0, 0, 0, 0.1); */
+  border: none;
+  border-radius: none;
+  border-bottom: 2px solid #343a40;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-bottom: 2px solid orange;
+}
+
+.contact-form button {
+  background: orange;
+  width: 6rem;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background: rgb(206, 128, 4);
 }
