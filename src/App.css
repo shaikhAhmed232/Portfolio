@@ -1,38 +1,270 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;1,300&family=Roboto:ital,wght@0,100;1,300&display=swap");
+
+:root {
+  --primary-orange: #f1c40f;
+  --primary-orange-hover: #b6930a;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.navbar-nav {
+  margin-left: auto !important;
+}
+
+.nav-container .navbar-brand {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+@media (max-width: 400px) {
+  .nav-container a.navbar-brand {
+    font-size: 1.4rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.nav-container a.navbar-brand:hover {
+  color: var(--primary-orange);
+}
+
+.nav-container button.navbar-toggler span {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+ul li a.nav-link {
+  color: white !important;
+  letter-spacing: 0.9px;
+  font-size: 1.2rem;
+  border-bottom: 3px solid rgba(255, 255, 255, 0);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+ul li.nav-item a.nav-link:hover,
+ul li.nav-item a.nav-link.active {
+  border-bottom: 3px solid var(--primary-orange);
+  color: var(--primary-orange) !important;
+}
+
+.home-wrapper {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./images/home-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  position: relative;
+}
+
+.home-wrapper h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+.info {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.typed-text {
+  font-size: 2rem;
+  color: var(--primary-orange);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.contact-btn {
+  border: 2px solid orange;
+  color: white;
+  width: 8rem;
+  margin: 2rem;
+  padding: 0.5rem 1.2rem;
+  text-decoration: none;
+  border-radius: 0.2rem;
+}
+
+.contact-btn:hover {
+  background: rgb(158, 104, 2);
+  color: white;
+  border: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+@media (max-height: 300px) {
+  .info {
+    padding-top: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.section {
+  padding: 1.5rem 0;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .section {
+    height: auto;
   }
+}
+
+.section p.sec-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.section p.sec-heading::after {
+  content: "";
+  width: 4rem;
+  height: 3px;
+  background-color: orange;
+  display: block;
+  margin: 0 auto;
+}
+
+.img-container img {
+  width: 100%;
+  margin-top: 1.4rem;
+}
+
+.about-me {
+  margin-top: 1.4rem;
+}
+
+.email h5 {
+  font-size: 1rem;
+  font-weight: bolder;
+  color: rgb(180, 122, 13);
+}
+
+.email h5::before {
+  display: inline-block;
+  content: ">";
+  color: orange;
+  margin-right: 0.4rem;
+}
+
+.email p {
+  display: inline;
+  margin: 0 0.5rem;
+}
+
+.info span.skill {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.progress-line {
+  width: 100%;
+  height: 10px;
+  background: grey;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.progress-line > .html-chart {
+  width: 100%;
+  height: 10px;
+  background: skyblue;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.progress-line > .css-chart {
+  width: 60%;
+  height: 10px;
+  background: skyblue;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.progress-line > .js-chart {
+  width: 70%;
+  height: 10px;
+  background: skyblue;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.progress-line > .react-chart {
+  width: 70%;
+  height: 10px;
+  background: skyblue;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.progress-line > .bootstrap-chart {
+  width: 30%;
+  height: 10px;
+  background: skyblue;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.contact-icon a {
+  text-decoration: none;
+  color: #343a40;
+}
+
+.contact-icon a:hover {
+  text-decoration: underline;
+}
+
+.faIcon {
+  color: orange;
+}
+
+.social-icon a {
+  font-size: 2rem;
+  margin: 0 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  /* background: rgba(0, 0, 0, 0.1); */
+  border: none;
+  border-radius: none;
+  border-bottom: 2px solid #343a40;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-bottom: 2px solid orange;
+}
+
+.contact-form button {
+  background: orange;
+  width: 6rem;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background: rgb(206, 128, 4);
 }
